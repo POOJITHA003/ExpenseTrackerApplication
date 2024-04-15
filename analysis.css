@@ -1,0 +1,50 @@
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+ 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#dough
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+  
+  #budgetAnalysis {
+    margin-top: 2rem;
+  }
+  
+  #budgetAnalysis h2 {
+    margin-bottom: 1rem;
+  }
+  
+ 
+
+#budgetTable th,
+#budgetTable td {
+    padding: 8px;
+    border-bottom: 1px solid #366de4;
+    text-align: left;
+}
+
+#budgetTable th {
+    background-color: #77b634;
+}
