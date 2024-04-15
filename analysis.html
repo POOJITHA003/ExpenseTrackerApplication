@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Analysis</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" href="analysis.css">
+</head>
+<body>
+  <h1>EXPENSE ANALYSIS</h1>
+  <h4><i><b>Income vs Expenses</b></i></h4>
+  
+  <div class="container">
+    
+    <canvas id="pieChart"></canvas>
+  
+  
+
+  <div id="budgetAnalysis">
+    <table id="budgetTable">
+      <thead>
+          <tr>
+              <th colspan="2">BUDGET ANALYSIS</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Data will be populated dynamically -->
+          <tr>
+            <td>Total Income</td>
+            <td><span id="totalIncome"></span></td>
+          </tr>
+          <tr><td>Total Expenses</td>
+          <td><span id="totalExpenses"></span></td></tr>
+          <tr>
+            <td>Budget Spent:</td>
+            <td><span id="budgetSpent"></span></td>
+          </tr>
+          <tr>
+            <td>Percentage of Budget Spent:</td>
+            <td><span id="budgetPercentage"></span></td>
+          </tr>
+      </tbody>
+  </table>
+    
+  
+  </div>
+</div >
+<h3><i><b>Income Analysis<b><i><h3>
+  <div id="dough"><canvas id="myChart" style="width:200;height:200px;" ></canvas></div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analysis.js"></script>
+  
+ 
+  <script>
+    
+    const xValues = ["Food", "Ulitility Bill", "Medical Bill", "Savings", "Others"];
+const yValues = [20/100, 30/100, 10/100, 30/100,10/100];
+const barColors = [
+  "#C0C0C0",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      is3D:true,
+      display: true,
+      text: "TRACKING EXPENSES"
+    }
+  }
+});
+  </script>
+</body>
+</html>
